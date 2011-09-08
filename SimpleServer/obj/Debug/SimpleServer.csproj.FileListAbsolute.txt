@@ -1,0 +1,5 @@
+c:\users\maanas s bukkuri\documents\visual studio 2010\Projects\SimpleServer\SimpleServer\obj\Debug\ResolveAssemblyReference.cache
+c:\users\maanas s bukkuri\documents\visual studio 2010\Projects\SimpleServer\SimpleServer\bin\Debug\SimpleServer.dll
+c:\users\maanas s bukkuri\documents\visual studio 2010\Projects\SimpleServer\SimpleServer\bin\Debug\SimpleServer.pdb
+c:\users\maanas s bukkuri\documents\visual studio 2010\Projects\SimpleServer\SimpleServer\obj\Debug\SimpleServer.dll
+c:\users\maanas s bukkuri\documents\visual studio 2010\Projects\SimpleServer\SimpleServer\obj\Debug\SimpleServer.pdb

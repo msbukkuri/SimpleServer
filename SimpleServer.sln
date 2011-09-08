@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleServer", "SimpleServer\SimpleServer.csproj", "{27311205-D574-421C-98AB-2EDE61D3B42D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleServer.Tests", "SimpleServer.Tests\SimpleServer.Tests.csproj", "{F8CBC896-9F49-4E69-8536-6D037843780C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{27311205-D574-421C-98AB-2EDE61D3B42D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27311205-D574-421C-98AB-2EDE61D3B42D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27311205-D574-421C-98AB-2EDE61D3B42D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27311205-D574-421C-98AB-2EDE61D3B42D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8CBC896-9F49-4E69-8536-6D037843780C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8CBC896-9F49-4E69-8536-6D037843780C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8CBC896-9F49-4E69-8536-6D037843780C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8CBC896-9F49-4E69-8536-6D037843780C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
