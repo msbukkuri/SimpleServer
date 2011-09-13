@@ -33,9 +33,18 @@ namespace SimpleServer.Tests
     // This is our entry point into the Http pipeline
     public class HttpStreamHandler : IStreamHandler
     {
+        private readonly IHttpRequestFactory _factory;
+        private readonly IHttpPipeline _pipeline;
+
+        public HttpStreamHandler(IHttpRequestFactory factory, IHttpPipeline pipeline)
+        {
+            _factory = factory;
+            _pipeline = pipeline;
+        }
+
         public void Handle(Stream stream)
         {
-            throw new System.NotImplementedException();
+            _pipeline.Execute(_factory.BuildFrom(stream));
         }
     }
 
