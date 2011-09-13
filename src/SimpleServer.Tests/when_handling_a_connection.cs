@@ -28,7 +28,7 @@ namespace SimpleServer.Tests
 
     public interface IStreamHandler
     {
-        void Handle(Stream strema);
+        void Handle(Stream stream);
     }
 
     public interface IConnection
@@ -40,9 +40,17 @@ namespace SimpleServer.Tests
     // but for now, there's no need (YAGNI)
     public class ConnectionHandler
     {
+        private readonly IStreamHandler _handler;
+
+        public ConnectionHandler(IStreamHandler handler)
+        {
+            _handler = handler;
+        }
+
         public void Handle(IConnection connection)
         {
-            throw new System.NotImplementedException();
+            _handler
+                .Handle(connection.Stream());
         }
     }
 }
