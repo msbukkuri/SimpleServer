@@ -1,4 +1,0 @@
-<Modules>
-  <Module PersistentId="27311205-D574-421C-98AB-2EDE61D3B42D" ModuleId="SimpleServer" />
-  <Module PersistentId="F8CBC896-9F49-4E69-8536-6D037843780C" ModuleId="SimpleServer.Tests" />
-</Modules>
