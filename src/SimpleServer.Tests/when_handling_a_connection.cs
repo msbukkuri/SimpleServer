@@ -25,32 +25,4 @@ namespace SimpleServer.Tests
             VerifyCallsFor<IStreamHandler>();
         }
     }
-
-    public interface IStreamHandler
-    {
-        void Handle(Stream stream);
-    }
-
-    public interface IConnection
-    {
-        Stream Stream();
-    }
-
-    // we only add interfaces when we get consumed by something. We'll eventually be consumed 
-    // but for now, there's no need (YAGNI)
-    public class ConnectionHandler
-    {
-        private readonly IStreamHandler _handler;
-
-        public ConnectionHandler(IStreamHandler handler)
-        {
-            _handler = handler;
-        }
-
-        public void Handle(IConnection connection)
-        {
-            _handler
-                .Handle(connection.Stream());
-        }
-    }
 }
