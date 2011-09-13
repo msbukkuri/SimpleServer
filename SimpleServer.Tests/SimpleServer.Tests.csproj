@@ -67,8 +67,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ConnectionHandler.cs" />
+    <Compile Include="HttpServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="when_opening_a_connection.cs" />
     <Compile Include="when_starting_the_http_server.cs" />
   </ItemGroup>
   <ItemGroup>
