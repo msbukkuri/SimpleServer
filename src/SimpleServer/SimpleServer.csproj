@@ -40,6 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HttpServer.cs" />
+    <Compile Include="HttpServerSettings.cs" />
+    <Compile Include="IHttpListener.cs" />
+    <Compile Include="IHttpListenerFactory.cs" />
     <Compile Include="IHttpServer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

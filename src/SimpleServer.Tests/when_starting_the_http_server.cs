@@ -1,7 +1,6 @@
 ﻿using FubuTestingSupport;
 using NUnit.Framework;
 using Rhino.Mocks;
-using StructureMap;
 
 namespace SimpleServer.Tests
 {
@@ -17,22 +16,13 @@ namespace SimpleServer.Tests
             MockFor<IHttpListenerFactory>()
                 .Expect(listener => listener.Create())
                 .Return(MockFor<IHttpListener>());
+
             MockFor<IHttpListener>()
                 .Expect(listener => listener.Listen(settings.Port));
 
             ClassUnderTest.Start();
+
             VerifyCallsFor<IHttpListener>();
         }
     }
-
-    public interface IHttpListener
-    {
-        void Listen(int port);
-    }
-
-    public interface IHttpListenerFactory
-    {
-        IHttpListener Create();
-    }
-
 }

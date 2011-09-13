@@ -1,4 +1,4 @@
-namespace SimpleServer.Tests
+namespace SimpleServer
 {
     public class HttpServer : IHttpServer
     {
@@ -19,10 +19,5 @@ namespace SimpleServer.Tests
         {
             throw new System.NotImplementedException();
         }
-    }
-
-    public class HttpServerSettings
-    {
-        public int Port { get; set; }
     }
 }
