@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HttpParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="when_building_an_http_request.cs" />
     <Compile Include="when_handling_a_connection.cs" />

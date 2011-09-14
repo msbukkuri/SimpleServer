@@ -6,7 +6,6 @@ namespace SimpleServer
     {
         Uri Url { get; }
         string HttpMethod { get; }
-        int ContentLength { get; }
         string ContentType { get; }
     }
 }
