@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Text;
 using FubuTestingSupport;
 using NUnit.Framework;
 
@@ -34,7 +35,9 @@ namespace SimpleServer.Tests
     {
         public string Parse(Stream stream)
         {
-            throw new NotImplementedException();
+            byte[] bytes = new byte[stream.Length];
+            stream.Read(bytes, 0, Convert.ToInt32(stream.Length));
+            return new ASCIIEncoding().GetString(bytes);
         }
     }
 }

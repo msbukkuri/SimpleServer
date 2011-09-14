@@ -70,7 +70,9 @@ Host: www.jmarshall.com
         private string ParseContentType(string message)
         {
             //TODO: Set ContentType
-            return message;
+            int startIndexOfContentType = message.IndexOf("Accept") + 8;
+            int endIndexOfContentType = message.IndexOf(',', startIndexOfContentType);
+            return message.Substring(startIndexOfContentType, endIndexOfContentType-startIndexOfContentType);
         }
     }
 }
