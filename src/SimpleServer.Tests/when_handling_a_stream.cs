@@ -12,7 +12,7 @@ namespace SimpleServer.Tests
         public void should_build_http_request_and_execute_pipeline()
         {
             var stream = new MemoryStream();
-            var request = new NulloHttpRequest();
+            var request = new HttpRequest();
 
             MockFor<IHttpRequestFactory>()
                 .Expect(factory => factory.BuildFrom(stream))

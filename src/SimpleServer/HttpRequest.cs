@@ -2,7 +2,7 @@ using System;
 
 namespace SimpleServer
 {
-    public class NulloHttpRequest : IHttpRequest
+    public class HttpRequest : IHttpRequest
     {
         public Uri Url { get; set; }
         public string HttpMethod { get; set; }

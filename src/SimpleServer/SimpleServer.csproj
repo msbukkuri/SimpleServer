@@ -52,7 +52,7 @@
     <Compile Include="IHttpRequestFactory.cs" />
     <Compile Include="IHttpServer.cs" />
     <Compile Include="IStreamHandler.cs" />
-    <Compile Include="NulloHttpRequest.cs" />
+    <Compile Include="HttpRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
