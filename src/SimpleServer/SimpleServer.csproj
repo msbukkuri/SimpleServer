@@ -43,11 +43,16 @@
     <Compile Include="ConnectionHandler.cs" />
     <Compile Include="HttpServer.cs" />
     <Compile Include="HttpServerSettings.cs" />
+    <Compile Include="HttpStreamHandler.cs" />
     <Compile Include="IConnection.cs" />
     <Compile Include="IHttpListener.cs" />
     <Compile Include="IHttpListenerFactory.cs" />
+    <Compile Include="IHttpPipeline.cs" />
+    <Compile Include="IHttpRequest.cs" />
+    <Compile Include="IHttpRequestFactory.cs" />
     <Compile Include="IHttpServer.cs" />
     <Compile Include="IStreamHandler.cs" />
+    <Compile Include="NulloHttpRequest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
