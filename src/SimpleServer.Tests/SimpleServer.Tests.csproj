@@ -72,6 +72,7 @@
     <Compile Include="when_building_an_http_request.cs" />
     <Compile Include="when_handling_a_connection.cs" />
     <Compile Include="when_handling_a_stream.cs" />
+    <Compile Include="when_parsing_a_stream.cs" />
     <Compile Include="when_starting_the_http_server.cs" />
   </ItemGroup>
   <ItemGroup>
