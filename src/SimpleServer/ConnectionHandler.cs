@@ -1,6 +1,6 @@
 namespace SimpleServer
 {
-    public class ConnectionHandler
+    public class ConnectionHandler : IConnectionHandler
     {
         private readonly IStreamHandler _handler;
 

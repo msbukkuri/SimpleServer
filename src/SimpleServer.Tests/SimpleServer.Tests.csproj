@@ -70,10 +70,12 @@
     <Compile Include="HttpParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="when_building_an_http_request.cs" />
+    <Compile Include="when_executing_an_http_request.cs" />
     <Compile Include="when_handling_a_connection.cs" />
     <Compile Include="when_handling_a_stream.cs" />
     <Compile Include="when_parsing_a_stream.cs" />
     <Compile Include="when_starting_the_http_server.cs" />
+    <Compile Include="when_starting_to_listen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

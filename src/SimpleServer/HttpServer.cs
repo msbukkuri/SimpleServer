@@ -8,7 +8,7 @@ namespace SimpleServer
         {
             _settings = settings;
             _factory = factory;
-        }   
+        }
 
         public void Start()
         {

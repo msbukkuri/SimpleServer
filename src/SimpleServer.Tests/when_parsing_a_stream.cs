@@ -1,6 +1,5 @@
 ﻿using System;
 using System.IO;
-using System.Text;
 using FubuTestingSupport;
 using NUnit.Framework;
 
@@ -28,16 +27,6 @@ namespace SimpleServer.Tests
             writer.Flush();
 
             stream.Seek(0, SeekOrigin.Begin);
-        }
-    }
-
-    public class StreamParser : IStreamParser
-    {
-        public string Parse(Stream stream)
-        {
-            byte[] bytes = new byte[stream.Length];
-            stream.Read(bytes, 0, Convert.ToInt32(stream.Length));
-            return new ASCIIEncoding().GetString(bytes);
         }
     }
 }
