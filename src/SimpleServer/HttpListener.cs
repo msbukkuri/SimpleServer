@@ -22,6 +22,11 @@ namespace SimpleServer
 
         public void Listen(int port)
         {
+            Listen(port, () => { });
+        }
+
+        public void Listen(int port, Action continuation)
+        {
             var ipLocal = new IPEndPoint(IPAddress.Any, port);
 
             _listener = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -30,14 +35,12 @@ namespace SimpleServer
             {
                 _listener.Bind(ipLocal);
                 _listener.Listen(100);
+                continuation();
 
                 while (shouldContinue())
                 {
                     _allDone.Reset();
-
-                    _listener.BeginAccept(
-                        new AsyncCallback(AcceptCallback),
-                        _listener);
+                    _listener.BeginAccept(AcceptCallback, _listener);
                     _allDone.WaitOne();
                 }
             }

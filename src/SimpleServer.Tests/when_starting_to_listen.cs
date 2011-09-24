@@ -15,20 +15,47 @@ namespace SimpleServer.Tests
         [Test]
         public void should_listen_and_handle_requests()
         {
-            var thread = new Thread(new ThreadStart(PushRequest));
-            MockFor<IConnectionHandler>()
-                .Expect(handler => handler.Handle(MockFor<IConnection>()));
+            var failed = false;
+            var thread = new Thread(() =>
+                                        {
+                                            Thread.Sleep(1000);
+                                            try
+                                            {
+                                                var request = (HttpWebRequest)WebRequest.Create("http://localhost:" + Port);
+                                                request.KeepAlive = false;
+                                                using (var response = request.GetResponse())
+                                                {
+                                                }
+                                            }
+                                            catch (WebException exc)
+                                            {
+                                                // ew...
+                                                failed = !exc
+                                                    .Message
+                                                    .ToLower()
+                                                    .Contains("the underlying connection was closed");
+                                            }
+                                            catch (Exception)
+                                            {
+                                                failed = true;
+                                            }
+                                            finally
+                                            {
+                                                ClassUnderTest.Stop();
+                                            }
+                                        });
 
-            thread.Start();
-            ClassUnderTest.Listen(Port);
+            MockFor<IConnectionHandler>()
+                .Expect(handler => handler.Handle(Arg<IConnection>.Matches(con => con.GetType().Equals(typeof(Connection)))));
+
+            ClassUnderTest.Listen(Port, thread.Start);
+
+            if(failed)
+            {
+                Assert.Fail("Could not connect to HttpListener");
+            }
+
             VerifyCallsFor<IConnectionHandler>();
         }
-
-        private void PushRequest()
-        {
-            Thread.Sleep(5000);
-            var responseStream = ((HttpWebRequest)WebRequest.Create("http://localhost:" + Port)).GetResponse();
-        }
-
     }
 }
