@@ -3,21 +3,22 @@ namespace SimpleServer
     public class HttpServer : IHttpServer
     {
         private HttpServerSettings _settings;
-        private IHttpListenerFactory _factory;
-        public HttpServer(HttpServerSettings settings, IHttpListenerFactory factory)
+        private readonly IHttpListener _listener;
+
+        public HttpServer(HttpServerSettings settings, IHttpListener listener)
         {
             _settings = settings;
-            _factory = factory;
+            _listener = listener;
         }
 
         public void Start()
         {
-            _factory.Create().Listen(_settings.Port);
+            _listener.Listen(_settings.Port);
         }
 
         public void Stop()
         {
-            throw new System.NotImplementedException();
+            _listener.Stop();
         }
     }
 }

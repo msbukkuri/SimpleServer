@@ -9,6 +9,7 @@ namespace SimpleServer.Host.Configuration
             Scan(x =>
                      {
                          x.AssemblyContainingType<IHttpServer>();
+                         x.TheCallingAssembly();
                          x.LookForRegistries();
                          x.WithDefaultConventions();
                      });

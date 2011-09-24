@@ -13,10 +13,6 @@ namespace SimpleServer.Tests
             var settings = new HttpServerSettings() { Port = 3000 };
             Container.Inject(settings);
 
-            MockFor<IHttpListenerFactory>()
-                .Expect(listener => listener.Create())
-                .Return(MockFor<IHttpListener>());
-
             MockFor<IHttpListener>()
                 .Expect(listener => listener.Listen(settings.Port));
 

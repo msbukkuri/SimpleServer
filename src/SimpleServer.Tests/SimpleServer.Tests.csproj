@@ -76,6 +76,7 @@
     <Compile Include="when_parsing_a_stream.cs" />
     <Compile Include="when_starting_the_http_server.cs" />
     <Compile Include="when_starting_to_listen.cs" />
+    <Compile Include="when_stopping_the_http_server.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
